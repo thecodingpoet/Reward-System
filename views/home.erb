@@ -1,19 +1,20 @@
 
-<div class="main container">
-  <div class="content col-8 offset-2">
-    <h3 class="heading text-center font-italic">Rewards System</h3>
-    <form action="/result" method="POST" enctype="multipart/form-data" class="row">
-      <div class="offset-3">
-        <div class="row">
-          <div class="form-group">
-            <input type="file" id="document" name="document" accept=".txt" class="form-control-file" size="70">
-          </div>
-        
-          <div class="">
-            <input type="submit" value="Calculate" class="btn submit-btn">
+<div class="main">
+  <div class="container">
+    <div class="content col-8 offset-2">
+      <h3 class="heading text-center font-italic">Rewards System</h3>
+      <form action="/result" method="POST" enctype="multipart/form-data" class="row">
+        <div class="offset-3">
+          <div class="row">
+            <div class="form-group">
+              <input type="file" id="document" name="document" accept=".txt" class="form-control-file" size="70">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Calculate" class="btn submit-btn disabled" disabled>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>
