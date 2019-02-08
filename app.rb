@@ -1,28 +1,13 @@
-class Customer
-  attr_accessor :inviter, :name, :point, :level
+require 'rubygems'
+require 'pry'
+require 'sinatra'
+require_relative 'customer'
 
-  def initialize(name)
-    @name = name
-    @point = 0
-    @level = 0
+class RewardSystem < Sinatra::Base
+  set :public_folder, Proc.new { File.join(File.dirname(__FILE__), 'content') }
+
+  get '/' do
+    erb :home, locals: { customers: "" }
   end
-
-  def recommends(invitee)
-    invitee.inviter = self if invitee.inviter.nil?  
-  end  
-
-  def reward(customer)
-    customer.point += ( 1.0 / 2 ) ** customer.level
-    customer.level += 1
-    return if customer.inviter.nil?
-    reward(customer.inviter)
-  end
-
-  def accepts
-    reward @inviter
-  end
+  
 end
-
-
-
-
