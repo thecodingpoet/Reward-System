@@ -52,5 +52,9 @@ Start the app to see the application:
 
 You can find your app now by pointing your browser to [http://localhost:3000](http://localhost:3000)
 
+### Instructions
+
+Upload a text file and click on the calculate button to view the result. Here is a [sample text file](https://github.com/thecodingpoet/Rewarder/blob/master/example.txt)
+
 ### Running specs
     bundle exec rspec
