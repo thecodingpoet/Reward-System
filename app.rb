@@ -14,8 +14,8 @@ class RewardSystem < Sinatra::Base
       action = line[1].to_sym
       case action
       when :recommends
-        next unless line[2]
         inviter, invitee = line[0], line[2] 
+        next unless invitee
         customers[inviter] = customers[inviter] || Customer.new;
         customers[invitee] = customers[invitee] || Customer.new;
         customers[inviter].recommends(customers[invitee])
