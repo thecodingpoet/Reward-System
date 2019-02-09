@@ -28,7 +28,7 @@ class RewardSystem < Sinatra::Base
         customers[invitee].accepts
       end
     end
-    customers.each { |key, value| customers[key] = value.point}
+    customers.each { |key, value| customers[key] = value.point }
     erb :result, locals: { customers: customers }
   end
 end

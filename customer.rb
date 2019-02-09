@@ -1,5 +1,3 @@
-require 'pry'
-
 class Customer
   attr_accessor :inviter, :point, :level
 
@@ -11,16 +9,18 @@ class Customer
   def recommends(invitee)
     invitee.inviter = self if invitee.inviter.nil?  
   end  
+  
+  def accepts
+    return if @inviter.nil?
+    reward @inviter
+  end
+
+  private 
 
   def reward(customer)
     customer.point += ( 1.0 / 2 ) ** customer.level
     customer.level += 1
     return if customer.inviter.nil?
     reward(customer.inviter)
-  end
-
-  def accepts
-    return if @inviter.nil?
-    reward @inviter
   end
 end
