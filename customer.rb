@@ -11,8 +11,8 @@ class Customer
   end  
   
   def accepts
-    return if @inviter.nil?
-    reward @inviter
+    return if inviter.nil?
+    reward inviter
   end
 
   private 
@@ -21,6 +21,6 @@ class Customer
     customer.point += ( 1.0 / 2 ) ** customer.level
     customer.level += 1
     return if customer.inviter.nil?
-    reward(customer.inviter)
+    reward customer.inviter
   end
 end

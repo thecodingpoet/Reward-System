@@ -25,7 +25,7 @@ RSpec.describe Customer do
 
   describe "#accepts" do
     context "when inviter does not have an inviter" do
-      before(:each) do
+      before do
         alan.recommends ben  
         ben.accepts
       end
@@ -40,7 +40,7 @@ RSpec.describe Customer do
     end
 
     context "when inviter has an inviter" do
-      before(:each) do
+      before do
         alan.recommends ben  
         ben.accepts
         ben.recommends clarke 

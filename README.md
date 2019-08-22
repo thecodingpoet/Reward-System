@@ -35,7 +35,7 @@ total score of 1.5 Points.
 Follow these easy steps to install and start the app:
 
 ### Pre-requisites
-- Ruby 2.3.1
+- Ruby
 
 ### Set up application
 
